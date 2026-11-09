@@ -1,5 +1,10 @@
 # Changements
 
+## 1.0.2 — 2026-11-09
+
+- Auteur indiqué dans `composer.json`, la licence et le README ; données d'exemple des tests neutres. Aucun
+  changement de fonctionnement.
+
 ## 1.0.1 — 2026-11-09
 
 - Heure de lecture du temps réel affichée dans le fuseau de l'option `timezone` (variable `timezone` du gabarit
