@@ -3,3 +3,21 @@
 /composer.lock
 /.phpunit.cache/
 /.php-cs-fixer.cache
+# Environnement local, secrets et fichiers générés : jamais versionnés.
+.env.local
+.env.*.local
+*.pem
+*.key
+*.p12
+*.sql
+*.sql.gz
+*.dump
+*.log
+*.bak
+*.swp
+*~
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+.phpunit.result.cache
