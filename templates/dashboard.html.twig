@@ -1,0 +1,113 @@
+{#
+ # Tableau de bord neutre (HTML sans thème) : à remplacer par un gabarit de l'application (option dashboard.template)
+ # ou à personnaliser bloc par bloc ({% extends '@MatomoReporting/dashboard.html.twig' %}). Variables : period,
+ # period_error, presets, granularity, granularities, page_reports, report, search, today, comparison, evolution,
+ # pages, dimensions, error, pages_only, pages_frame, live_minutes, live_frame.
+ # pages_only : demande du cadre Turbo des pages (recherche, pagination) : seul ce cadre est rendu.
+ #}
+{% import '@MatomoReporting/_macros.html.twig' as matomo %}
+{% if pages_only %}
+    <turbo-frame id="{{ pages_frame }}">{{ block('pages') }}</turbo-frame>
+{% else %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Mesure d'audience{% endblock %}</title>
+</head>
+<body>
+{% block matomo_reporting %}
+    <main class="matomo-reporting">
+        <h1>Mesure d'audience</h1>
+
+        {% block filters %}
+            <form method="get" class="matomo-reporting__filters">
+                <label for="matomo-period">Période</label>
+                <select id="matomo-period" name="period">
+                    {% for preset in presets %}
+                        <option value="{{ preset.value }}"{% if preset == period.preset %} selected{% endif %}>{{ preset.label }}</option>
+                    {% endfor %}
+                </select>
+                <label for="matomo-start">Du (période personnalisée)</label>
+                <input id="matomo-start" type="date" name="start" value="{{ period.start|date('Y-m-d', false) }}" max="{{ today|date('Y-m-d', false) }}">
+                <label for="matomo-end">Au</label>
+                <input id="matomo-end" type="date" name="end" value="{{ period.end|date('Y-m-d', false) }}" max="{{ today|date('Y-m-d', false) }}">
+                <button type="submit">Afficher</button>
+            </form>
+            {% if period_error %}<p role="alert">{{ period_error }} Période par défaut affichée.</p>{% endif %}
+        {% endblock %}
+
+        <p>Statistiques {{ period.label }}.</p>
+
+        {% block live %}
+            {% if live_minutes %}
+                {# Chargé par Turbo depuis la route matomo_reporting_live ; sans Turbo, lien vers le fragment. #}
+                <turbo-frame id="{{ live_frame }}" src="{{ path('matomo_reporting_live') }}">
+                    <a href="{{ path('matomo_reporting_live') }}">Fréquentation en ce moment</a>
+                </turbo-frame>
+            {% endif %}
+        {% endblock %}
+
+        {% if error %}
+            {% block error %}
+                <p role="alert">Les statistiques sont momentanément indisponibles (Matomo ne répond pas ou a refusé la demande). Réessayez plus tard.</p>
+            {% endblock %}
+        {% else %}
+            {% block summary %}
+                <h2>Indicateurs</h2>
+                <dl>
+                    {% for item in matomo_indicators(comparison) %}
+                        <dt>{{ item.label }}</dt>
+                        <dd>
+                            {{- item.value ?? 'Non disponible pour cette période' -}}
+                            {% if item.change is not null %} ({{ item.change > 0 ? '+' }}{{ item.change|matomo_number(1) }} {{ item.unit }} par rapport à la période précédente, {{ comparison.previousPeriod.label }}){% endif %}
+                        </dd>
+                    {% endfor %}
+                </dl>
+            {% endblock %}
+
+            {% block evolution %}
+                <h2>Évolution ({{ granularity.label|lower }})</h2>
+                <table>
+                    <caption>Visites et pages vues {{ period.label }}</caption>
+                    <thead><tr><th scope="col">Période</th><th scope="col">Visites</th><th scope="col">Pages vues</th></tr></thead>
+                    <tbody>
+                        {% for point in evolution %}
+                            <tr><th scope="row">{{ point.label }}</th><td>{{ point.visits|matomo_number }}</td><td>{{ point.pageviews|matomo_number }}</td></tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            {% endblock %}
+
+            <turbo-frame id="{{ pages_frame }}">
+                {% block pages %}
+                    {% if error %}
+                        <p role="alert">Les statistiques sont momentanément indisponibles.</p>
+                    {% else %}
+                        <h2>{{ report.label }}</h2>
+                        {{ matomo.pages_table(pages, period) }}
+                    {% endif %}
+                {% endblock %}
+            </turbo-frame>
+
+            {% block dimensions %}
+                {% for dimension in dimensions %}
+                    <h2>{{ dimension.report.label }}</h2>
+                    {% if dimension.rows is null %}
+                        <p>Rapport non disponible sur ce serveur Matomo.</p>
+                    {% elseif dimension.rows is empty %}
+                        <p>Aucune donnée pour cette période.</p>
+                    {% else %}
+                        <ul>
+                            {% for row in dimension.rows %}<li>{{ row.label }} : {{ row.visits|matomo_number }} visites ({{ row.share|matomo_number(1) }} %)</li>{% endfor %}
+                        </ul>
+                    {% endif %}
+                {% endfor %}
+            {% endblock %}
+        {% endif %}
+    </main>
+{% endblock %}
+</body>
+</html>
+{% endif %}

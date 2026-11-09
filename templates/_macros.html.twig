@@ -1,0 +1,37 @@
+{# Tableau des pages (rapport de pages), avec pagination par liens (paramètre offset conservant les autres filtres). #}
+{% macro pages_table(pages, period) %}
+    {% if pages is null or pages.rows is empty %}
+        <p>Aucune page pour cette période.</p>
+    {% else %}
+        <table>
+            <caption>{{ pages.report.label }} {{ period.label }}</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Page</th>
+                    <th scope="col">Pages vues</th>
+                    <th scope="col">Visites</th>
+                    <th scope="col">Temps moyen</th>
+                    <th scope="col">Taux de rebond</th>
+                    <th scope="col">Taux de sortie</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in pages.rows %}
+                    <tr>
+                        <th scope="row">{{ row.label }}{% if row.url and row.url != row.label %}<br><small>{{ row.url }}</small>{% endif %}</th>
+                        <td>{{ row.pageviews|matomo_number }}</td>
+                        <td>{{ row.visits|matomo_number }}</td>
+                        <td>{{ row.averageTimeOnPage|matomo_duration }}</td>
+                        <td>{{ row.bounceRate is null ? '—' : row.bounceRate ~ ' %' }}</td>
+                        <td>{{ row.exitRate is null ? '—' : row.exitRate ~ ' %' }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <nav aria-label="Pages du tableau">
+            {% set query = app.request.query.all %}
+            {% if pages.offset > 0 %}<a href="?{{ query|merge({offset: max(0, pages.offset - pages.limit)})|url_encode }}">Précédent</a>{% endif %}
+            {% if pages.hasMore %}<a href="?{{ query|merge({offset: pages.offset + pages.limit})|url_encode }}">Suivant</a>{% endif %}
+        </nav>
+    {% endif %}
+{% endmacro %}

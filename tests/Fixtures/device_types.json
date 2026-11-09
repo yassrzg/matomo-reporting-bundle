@@ -1,0 +1,100 @@
+[
+    {
+        "label": "Bureau",
+        "nb_visits": 112,
+        "nb_actions": 405,
+        "max_actions": 14,
+        "sum_visit_length": 44286,
+        "bounce_count": 19,
+        "nb_visits_converted": 0,
+        "sum_daily_nb_uniq_visitors": 112,
+        "sum_daily_nb_users": 0,
+        "segment": "deviceType==desktop",
+        "logo": "plugins/Morpheus/icons/dist/devices/desktop.png"
+    },
+    {
+        "label": "Téléphone intelligent (smartphone)",
+        "nb_visits": 108,
+        "nb_actions": 366,
+        "max_actions": 10,
+        "sum_visit_length": 37762,
+        "bounce_count": 20,
+        "nb_visits_converted": 0,
+        "sum_daily_nb_uniq_visitors": 108,
+        "sum_daily_nb_users": 0,
+        "segment": "deviceType==smartphone",
+        "logo": "plugins/Morpheus/icons/dist/devices/smartphone.png"
+    },
+    {
+        "label": "Appareil photo",
+        "nb_visits": 0,
+        "segment": "deviceType==camera",
+        "logo": "plugins/Morpheus/icons/dist/devices/camera.png"
+    },
+    {
+        "label": "Baladeur multimédia",
+        "nb_visits": 0,
+        "segment": "deviceType==portable+media+player",
+        "logo": "plugins/Morpheus/icons/dist/devices/portable_media_player.png"
+    },
+    {
+        "label": "Console",
+        "nb_visits": 0,
+        "segment": "deviceType==console",
+        "logo": "plugins/Morpheus/icons/dist/devices/console.png"
+    },
+    {
+        "label": "Haut-parleur intelligent",
+        "nb_visits": 0,
+        "segment": "deviceType==smart+speaker",
+        "logo": "plugins/Morpheus/icons/dist/devices/smart_speaker.png"
+    },
+    {
+        "label": "Navigateur de voiture",
+        "nb_visits": 0,
+        "segment": "deviceType==car+browser",
+        "logo": "plugins/Morpheus/icons/dist/devices/car_browser.png"
+    },
+    {
+        "label": "Phablette",
+        "nb_visits": 0,
+        "segment": "deviceType==phablet",
+        "logo": "plugins/Morpheus/icons/dist/devices/phablet.png"
+    },
+    {
+        "label": "Périphérique",
+        "nb_visits": 0,
+        "segment": "deviceType==peripheral",
+        "logo": "plugins/Morpheus/icons/dist/devices/peripheral.png"
+    },
+    {
+        "label": "Tablette",
+        "nb_visits": 0,
+        "segment": "deviceType==tablet",
+        "logo": "plugins/Morpheus/icons/dist/devices/tablet.png"
+    },
+    {
+        "label": "Technologie portable",
+        "nb_visits": 0,
+        "segment": "deviceType==wearable",
+        "logo": "plugins/Morpheus/icons/dist/devices/wearable.png"
+    },
+    {
+        "label": "Téléphone mobile basique",
+        "nb_visits": 0,
+        "segment": "deviceType==feature+phone",
+        "logo": "plugins/Morpheus/icons/dist/devices/feature_phone.png"
+    },
+    {
+        "label": "Téléviseur",
+        "nb_visits": 0,
+        "segment": "deviceType==tv",
+        "logo": "plugins/Morpheus/icons/dist/devices/tv.png"
+    },
+    {
+        "label": "Écran connecté",
+        "nb_visits": 0,
+        "segment": "deviceType==smart+display",
+        "logo": "plugins/Morpheus/icons/dist/devices/smart_display.png"
+    }
+]

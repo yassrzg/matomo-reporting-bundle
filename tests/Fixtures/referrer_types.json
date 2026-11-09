@@ -1,0 +1,43 @@
+[
+    {
+        "label": "Entrées directes",
+        "nb_visits": 102,
+        "nb_actions": 342,
+        "max_actions": 14,
+        "sum_visit_length": 36693,
+        "bounce_count": 20,
+        "nb_visits_converted": 0,
+        "sum_daily_nb_uniq_visitors": 102,
+        "sum_daily_nb_users": 0,
+        "segment": "referrerType==direct",
+        "referrer_type": 1
+    },
+    {
+        "label": "Moteurs de recherche",
+        "nb_visits": 81,
+        "nb_actions": 314,
+        "max_actions": 9,
+        "sum_visit_length": 35377,
+        "bounce_count": 12,
+        "nb_visits_converted": 0,
+        "sum_daily_nb_uniq_visitors": 81,
+        "sum_daily_nb_users": 0,
+        "segment": "referrerType==search",
+        "referrer_type": 2,
+        "idsubdatatable": 2
+    },
+    {
+        "label": "Sites web",
+        "nb_visits": 37,
+        "nb_actions": 115,
+        "max_actions": 10,
+        "sum_visit_length": 9978,
+        "bounce_count": 7,
+        "nb_visits_converted": 0,
+        "sum_daily_nb_uniq_visitors": 37,
+        "sum_daily_nb_users": 0,
+        "segment": "referrerType==website",
+        "referrer_type": 3,
+        "idsubdatatable": 3
+    }
+]

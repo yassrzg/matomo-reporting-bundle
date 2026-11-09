@@ -1,0 +1,93 @@
+{
+    "2026-11-02": {
+        "nb_uniq_visitors": 12,
+        "nb_users": 0,
+        "nb_visits": 12,
+        "nb_actions": 42,
+        "nb_visits_converted": 0,
+        "bounce_count": 4,
+        "sum_visit_length": 5327,
+        "max_actions": 8,
+        "bounce_rate": "33%",
+        "nb_actions_per_visit": 3.5,
+        "avg_time_on_site": 444
+    },
+    "2026-11-03": {
+        "nb_uniq_visitors": 12,
+        "nb_users": 0,
+        "nb_visits": 12,
+        "nb_actions": 39,
+        "nb_visits_converted": 0,
+        "bounce_count": 2,
+        "sum_visit_length": 3035,
+        "max_actions": 5,
+        "bounce_rate": "17%",
+        "nb_actions_per_visit": 3.3,
+        "avg_time_on_site": 253
+    },
+    "2026-11-04": {
+        "nb_uniq_visitors": 9,
+        "nb_users": 0,
+        "nb_visits": 9,
+        "nb_actions": 38,
+        "nb_visits_converted": 0,
+        "bounce_count": 1,
+        "sum_visit_length": 2947,
+        "max_actions": 10,
+        "bounce_rate": "11%",
+        "nb_actions_per_visit": 4.2,
+        "avg_time_on_site": 327
+    },
+    "2026-11-05": {
+        "nb_uniq_visitors": 9,
+        "nb_users": 0,
+        "nb_visits": 9,
+        "nb_actions": 23,
+        "nb_visits_converted": 0,
+        "bounce_count": 3,
+        "sum_visit_length": 1957,
+        "max_actions": 5,
+        "bounce_rate": "33%",
+        "nb_actions_per_visit": 2.6,
+        "avg_time_on_site": 217
+    },
+    "2026-11-06": {
+        "nb_uniq_visitors": 10,
+        "nb_users": 0,
+        "nb_visits": 10,
+        "nb_actions": 34,
+        "nb_visits_converted": 0,
+        "bounce_count": 1,
+        "sum_visit_length": 4771,
+        "max_actions": 7,
+        "bounce_rate": "10%",
+        "nb_actions_per_visit": 3.4,
+        "avg_time_on_site": 477
+    },
+    "2026-11-07": {
+        "nb_uniq_visitors": 9,
+        "nb_users": 0,
+        "nb_visits": 9,
+        "nb_actions": 32,
+        "nb_visits_converted": 0,
+        "bounce_count": 2,
+        "sum_visit_length": 2766,
+        "max_actions": 8,
+        "bounce_rate": "22%",
+        "nb_actions_per_visit": 3.6,
+        "avg_time_on_site": 307
+    },
+    "2026-11-08": {
+        "nb_uniq_visitors": 10,
+        "nb_users": 0,
+        "nb_visits": 10,
+        "nb_actions": 31,
+        "nb_visits_converted": 0,
+        "bounce_count": 3,
+        "sum_visit_length": 4598,
+        "max_actions": 8,
+        "bounce_rate": "30%",
+        "nb_actions_per_visit": 3.1,
+        "avg_time_on_site": 460
+    }
+}

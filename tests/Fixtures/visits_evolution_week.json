@@ -1,0 +1,80 @@
+{
+    "2026-09-28,2026-10-04": {
+        "nb_uniq_visitors": 55,
+        "nb_users": 0,
+        "nb_visits": 55,
+        "nb_actions": 183,
+        "nb_visits_converted": 0,
+        "bounce_count": 9,
+        "sum_visit_length": 16863,
+        "max_actions": 7,
+        "bounce_rate": "16%",
+        "nb_actions_per_visit": 3.3,
+        "avg_time_on_site": 307
+    },
+    "2026-10-05,2026-10-11": {
+        "nb_uniq_visitors": 50,
+        "nb_users": 0,
+        "nb_visits": 50,
+        "nb_actions": 178,
+        "nb_visits_converted": 0,
+        "bounce_count": 7,
+        "sum_visit_length": 19420,
+        "max_actions": 10,
+        "bounce_rate": "14%",
+        "nb_actions_per_visit": 3.6,
+        "avg_time_on_site": 388
+    },
+    "2026-10-12,2026-10-18": {
+        "nb_uniq_visitors": 38,
+        "nb_users": 0,
+        "nb_visits": 38,
+        "nb_actions": 141,
+        "nb_visits_converted": 0,
+        "bounce_count": 5,
+        "sum_visit_length": 14615,
+        "max_actions": 14,
+        "bounce_rate": "13%",
+        "nb_actions_per_visit": 3.7,
+        "avg_time_on_site": 385
+    },
+    "2026-10-19,2026-10-25": {
+        "nb_uniq_visitors": 47,
+        "nb_users": 0,
+        "nb_visits": 47,
+        "nb_actions": 157,
+        "nb_visits_converted": 0,
+        "bounce_count": 8,
+        "sum_visit_length": 16498,
+        "max_actions": 8,
+        "bounce_rate": "17%",
+        "nb_actions_per_visit": 3.3,
+        "avg_time_on_site": 351
+    },
+    "2026-10-26,2026-11-01": {
+        "nb_uniq_visitors": 51,
+        "nb_users": 0,
+        "nb_visits": 51,
+        "nb_actions": 185,
+        "nb_visits_converted": 0,
+        "bounce_count": 7,
+        "sum_visit_length": 19803,
+        "max_actions": 9,
+        "bounce_rate": "14%",
+        "nb_actions_per_visit": 3.6,
+        "avg_time_on_site": 388
+    },
+    "2026-11-02,2026-11-08": {
+        "nb_uniq_visitors": 71,
+        "nb_users": 0,
+        "nb_visits": 71,
+        "nb_actions": 239,
+        "nb_visits_converted": 0,
+        "bounce_count": 16,
+        "sum_visit_length": 25401,
+        "max_actions": 10,
+        "bounce_rate": "23%",
+        "nb_actions_per_visit": 3.4,
+        "avg_time_on_site": 358
+    }
+}

@@ -1,0 +1,70 @@
+{
+    "name": "yassrzg/matomo-reporting-bundle",
+    "description": "Statistiques de fréquentation Matomo dans une application Symfony : client de l'API de reporting (côté serveur, jeton jamais exposé), cache, périodes, rapports typés et tableau de bord personnalisable.",
+    "type": "symfony-bundle",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "yassine REZGUI",
+            "homepage": "https://github.com/yassrzg",
+            "role": "Developer"
+        }
+    ],
+    "keywords": [
+        "symfony",
+        "bundle",
+        "matomo",
+        "analytics",
+        "reporting",
+        "statistics",
+        "dashboard"
+    ],
+    "homepage": "https://github.com/yassrzg/matomo-reporting-bundle",
+    "support": {
+        "issues": "https://github.com/yassrzg/matomo-reporting-bundle/issues",
+        "source": "https://github.com/yassrzg/matomo-reporting-bundle"
+    },
+    "require": {
+        "php": ">=8.3",
+        "psr/cache": "^2.0|^3.0",
+        "psr/log": "^1.1|^2.0|^3.0",
+        "symfony/cache": "^7.4|^8.0",
+        "symfony/config": "^7.4|^8.0",
+        "symfony/dependency-injection": "^7.4|^8.0",
+        "symfony/http-client": "^7.4|^8.0",
+        "symfony/http-kernel": "^7.4|^8.0"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.75",
+        "phpstan/phpstan": "^2.1",
+        "phpstan/phpstan-symfony": "^2.0",
+        "phpunit/phpunit": "^12.0",
+        "symfony/browser-kit": "^7.4|^8.0",
+        "symfony/css-selector": "^7.4|^8.0",
+        "symfony/framework-bundle": "^7.4|^8.0",
+        "symfony/routing": "^7.4|^8.0",
+        "symfony/security-bundle": "^7.4|^8.0",
+        "symfony/twig-bundle": "^7.4|^8.0",
+        "twig/twig": "^3.21"
+    },
+    "suggest": {
+        "symfony/framework-bundle": "Tableau de bord intégré (contrôleur, routes)",
+        "symfony/twig-bundle": "Gabarit du tableau de bord (remplaçable par l'application)",
+        "symfony/security-bundle": "Accès au tableau de bord réservé à un rôle"
+    },
+    "autoload": {
+        "psr-4": {
+            "Yassrzg\\MatomoReportingBundle\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Yassrzg\\MatomoReportingBundle\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}

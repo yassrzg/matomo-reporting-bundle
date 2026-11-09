@@ -1,0 +1,79 @@
+{
+    "2026-11-02": {
+        "nb_pageviews": 39,
+        "nb_uniq_pageviews": 32,
+        "nb_downloads": 0,
+        "nb_uniq_downloads": 0,
+        "nb_outlinks": 0,
+        "nb_uniq_outlinks": 0,
+        "nb_searches": 3,
+        "nb_keywords": 1,
+        "hits": 42
+    },
+    "2026-11-03": {
+        "nb_pageviews": 31,
+        "nb_uniq_pageviews": 27,
+        "nb_downloads": 0,
+        "nb_uniq_downloads": 0,
+        "nb_outlinks": 0,
+        "nb_uniq_outlinks": 0,
+        "nb_searches": 8,
+        "nb_keywords": 1,
+        "hits": 39
+    },
+    "2026-11-04": {
+        "nb_pageviews": 33,
+        "nb_uniq_pageviews": 23,
+        "nb_downloads": 0,
+        "nb_uniq_downloads": 0,
+        "nb_outlinks": 0,
+        "nb_uniq_outlinks": 0,
+        "nb_searches": 5,
+        "nb_keywords": 1,
+        "hits": 38
+    },
+    "2026-11-05": {
+        "nb_pageviews": 22,
+        "nb_uniq_pageviews": 21,
+        "nb_downloads": 0,
+        "nb_uniq_downloads": 0,
+        "nb_outlinks": 0,
+        "nb_uniq_outlinks": 0,
+        "nb_searches": 1,
+        "nb_keywords": 1,
+        "hits": 23
+    },
+    "2026-11-06": {
+        "nb_pageviews": 30,
+        "nb_uniq_pageviews": 26,
+        "nb_downloads": 0,
+        "nb_uniq_downloads": 0,
+        "nb_outlinks": 0,
+        "nb_uniq_outlinks": 0,
+        "nb_searches": 4,
+        "nb_keywords": 1,
+        "hits": 34
+    },
+    "2026-11-07": {
+        "nb_pageviews": 28,
+        "nb_uniq_pageviews": 24,
+        "nb_downloads": 0,
+        "nb_uniq_downloads": 0,
+        "nb_outlinks": 0,
+        "nb_uniq_outlinks": 0,
+        "nb_searches": 4,
+        "nb_keywords": 1,
+        "hits": 32
+    },
+    "2026-11-08": {
+        "nb_pageviews": 28,
+        "nb_uniq_pageviews": 24,
+        "nb_downloads": 0,
+        "nb_uniq_downloads": 0,
+        "nb_outlinks": 0,
+        "nb_uniq_outlinks": 0,
+        "nb_searches": 3,
+        "nb_keywords": 1,
+        "hits": 31
+    }
+}

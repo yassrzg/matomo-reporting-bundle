@@ -1,0 +1,11 @@
+includes:
+    - vendor/phpstan/phpstan-symfony/extension.neon
+
+parameters:
+    level: max
+    phpVersion: 80300
+    paths:
+        - src
+        - config
+        - tests
+    tmpDir: var/phpstan

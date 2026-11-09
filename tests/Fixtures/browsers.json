@@ -1,0 +1,54 @@
+[
+    {
+        "label": "Chrome",
+        "nb_visits": 59,
+        "nb_actions": 213,
+        "max_actions": 10,
+        "sum_visit_length": 25994,
+        "bounce_count": 12,
+        "nb_visits_converted": 0,
+        "sum_daily_nb_uniq_visitors": 59,
+        "sum_daily_nb_users": 0,
+        "logo": "plugins/Morpheus/icons/dist/browsers/CH.png",
+        "segment": "browserCode==CH"
+    },
+    {
+        "label": "Mobile Safari",
+        "nb_visits": 59,
+        "nb_actions": 198,
+        "max_actions": 9,
+        "sum_visit_length": 18720,
+        "bounce_count": 11,
+        "nb_visits_converted": 0,
+        "sum_daily_nb_uniq_visitors": 59,
+        "sum_daily_nb_users": 0,
+        "logo": "plugins/Morpheus/icons/dist/browsers/MF.png",
+        "segment": "browserCode==MF"
+    },
+    {
+        "label": "Firefox",
+        "nb_visits": 53,
+        "nb_actions": 192,
+        "max_actions": 14,
+        "sum_visit_length": 18292,
+        "bounce_count": 7,
+        "nb_visits_converted": 0,
+        "sum_daily_nb_uniq_visitors": 53,
+        "sum_daily_nb_users": 0,
+        "logo": "plugins/Morpheus/icons/dist/browsers/FF.png",
+        "segment": "browserCode==FF"
+    },
+    {
+        "label": "Chrome Mobile",
+        "nb_visits": 49,
+        "nb_actions": 168,
+        "max_actions": 10,
+        "sum_visit_length": 19042,
+        "bounce_count": 9,
+        "nb_visits_converted": 0,
+        "sum_daily_nb_uniq_visitors": 49,
+        "sum_daily_nb_users": 0,
+        "logo": "plugins/Morpheus/icons/dist/browsers/CM.png",
+        "segment": "browserCode==CM"
+    }
+]
