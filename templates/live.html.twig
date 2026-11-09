@@ -1,11 +1,11 @@
 {#
  # Fréquentation en temps réel (cadre « matomo-reporting-live », rechargé par la page). Variables : counters
- # (LiveCounters ou null si indisponible), minutes, live_frame.
+ # (LiveCounters ou null si indisponible), minutes, live_frame, timezone (fuseau de l'option timezone).
  #}
 <turbo-frame id="{{ live_frame }}">
     {% block live %}
         {% if counters %}
-            <p>En ce moment ({{ minutes }} dernières minutes) : {{ counters.visits|matomo_number }} visite{{ counters.visits > 1 ? 's' }}, {{ counters.actions|matomo_number }} action{{ counters.actions > 1 ? 's' }}. Lu à {{ counters.readAt|date('H:i', false) }}.</p>
+            <p>En ce moment ({{ minutes }} dernières minutes) : {{ counters.visits|matomo_number }} visite{{ counters.visits > 1 ? 's' }}, {{ counters.actions|matomo_number }} action{{ counters.actions > 1 ? 's' }}. Lu à {{ counters.readAt|date('H:i', timezone) }}.</p>
         {% else %}
             <p>Fréquentation en temps réel indisponible.</p>
         {% endif %}

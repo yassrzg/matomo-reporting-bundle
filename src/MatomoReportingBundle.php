@@ -185,6 +185,7 @@ final class MatomoReportingBundle extends AbstractBundle
                     service('security.authorization_checker')->nullOnInvalid(),
                     service('logger')->nullOnInvalid(),
                     $config['live']['enabled'],
+                    $config['timezone'],
                 ])
                 ->public()
                 ->tag('controller.service_arguments')

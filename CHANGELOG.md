@@ -1,5 +1,10 @@
 # Changements
 
+## 1.0.1 — 2026-11-09
+
+- Heure de lecture du temps réel affichée dans le fuseau de l'option `timezone` (variable `timezone` du gabarit
+  `live.html.twig`), et non plus dans celui du serveur.
+
 ## 1.0.0 — 2026-11-08
 
 - Client de l'API de reporting Matomo (`HttpMatomoClient`) : `POST`, jeton dans le corps de la requête, délai,

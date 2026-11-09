@@ -32,6 +32,7 @@ final readonly class LiveController
         private ?AuthorizationCheckerInterface $authorization = null,
         private LoggerInterface $logger = new NullLogger(),
         private bool $enabled = true,
+        private string $timezone = 'Europe/Paris',
     ) {
     }
 
@@ -51,7 +52,7 @@ final readonly class LiveController
             $this->logger->warning('Temps réel Matomo indisponible : {message}', ['message' => $e->getMessage(), 'exception_class' => $e::class]);
         }
 
-        $response = new Response($this->twig->render($this->template, ['counters' => $counters, 'minutes' => $this->minutes, 'live_frame' => self::FRAME]));
+        $response = new Response($this->twig->render($this->template, ['counters' => $counters, 'minutes' => $this->minutes, 'live_frame' => self::FRAME, 'timezone' => $this->timezone]));
         $response->setPrivate();
         $response->headers->addCacheControlDirective('no-store');
         $response->headers->set('X-Robots-Tag', 'noindex');

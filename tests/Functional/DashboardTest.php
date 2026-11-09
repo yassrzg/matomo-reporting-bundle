@@ -93,6 +93,8 @@ final class DashboardTest extends WebTestCase
         $crawler = $this->client->request('GET', '/statistiques/en-ce-moment', server: self::admin());
         self::assertResponseIsSuccessful();
         self::assertStringContainsString('1 visite, 6 actions', $crawler->filter('turbo-frame#matomo-reporting-live')->text());
+        $readAt = (new \DateTimeImmutable('now', new \DateTimeZone('Europe/Paris')))->format('H:i');
+        self::assertStringContainsString('Lu à '.$readAt, $crawler->filter('turbo-frame#matomo-reporting-live')->text(), 'Heure dans le fuseau configuré.');
         self::assertSame(['Live.getCounters'], array_column($this->fixtures->calls, 'method'));
         self::assertTrue($this->client->getResponse()->headers->hasCacheControlDirective('no-store'), 'Jamais gardé par le navigateur.');
 
